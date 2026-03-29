@@ -36,14 +36,29 @@ public:
 
 int main()
 {
-    int gas[] = {1, 2, 3, 4, 5};
-    int cost[] = {3, 4, 5, 1, 2};
-    int n = 5;
+    int n;
+    cout << "Enter no. of Gas Stations: ";
+    cin >> n;
+
+    int gas[n];
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter Amount of Gas at " << i + 1 << " Station: ";
+        cin >> gas[i];
+    }
+
+    int cost[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter cost required to Reach " << i + 1 << " Station: ";
+        cin >> cost[i];
+    }
 
     Solution obj;
     int result = obj.canCompleteCircuit(gas, cost, n);
 
-    cout << "Starting index: " << result;
+    cout << "Starting Station Index: " << result;
 
     return 0;
 }

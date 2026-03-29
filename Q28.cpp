@@ -21,7 +21,7 @@ int main(){
             odd += a[i];
     }
 
-    cout<<"Sum of even numbers = "<<even;
+    cout<<"Sum of even numbers = "<<even<<endl;
     cout<<"Sum of odd numbers = "<<odd;
 
     return 0;

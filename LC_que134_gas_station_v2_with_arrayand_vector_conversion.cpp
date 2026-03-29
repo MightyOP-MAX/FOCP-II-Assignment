@@ -40,19 +40,25 @@ int main()
     cout << "Enter no. of Gas Stations: ";
     cin >> n;
 
-    vector<int> gas(n);
+    int gasArr[n];
+
     for (int i = 0; i < n; i++)
     {
-        cout << "Enter Amount of Gas at Station "<< i + 1<<": ";
-        cin >> gas[i];
+        cout << "Enter Amount of Gas at " << i + 1<< " Station: ";
+        cin >> gasArr[i];
     }
 
-    vector<int> cost(n);
+    int costArr[n];
+
     for (int i = 0; i < n; i++)
     {
-        cout << "Enter cost required to Reach Station "<< i + 1 << ": ";
-        cin >> cost[i];
+        cout << "Enter cost required to Reach " << i + 1 << " Station: ";
+        cin >> costArr[i];
     }
+
+    // used to convert arrays to vetor to feed the class ;
+    vector<int> gas(gasArr, gasArr + n);
+    vector<int> cost(costArr, costArr + n);
 
     Solution obj;
     int result = obj.canCompleteCircuit(gas, cost);
