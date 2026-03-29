@@ -15,7 +15,6 @@ public:
         {
             totalGas = totalGas + gas[i];
             totalCost = totalCost + cost[i];
-
             tank = tank + gas[i] - cost[i];
 
             if (tank < 0) 
