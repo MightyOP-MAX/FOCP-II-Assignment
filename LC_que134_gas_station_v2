@@ -35,9 +35,13 @@ public:
 };
 
 int main() {
-    int gas[] = {1, 2, 3, 4, 5};
-    int cost[] = {3, 4, 5, 1, 2};
+    int gasArr[] = {1, 2, 3, 4, 5};
+    int costArr[] = {3, 4, 5, 1, 2};
     int n = 5;
+
+    // Convert array to vector
+    vector<int> gas(gasArr, gasArr + n);
+    vector<int> cost(costArr, costArr + n);
 
     Solution obj;
     int result = obj.canCompleteCircuit(gas, cost);
